@@ -7,27 +7,16 @@ const General = () => {
   const [phone, setPhone] = useState("");
   const [editing, setEdit] = useState(true);
 
-  const handleSubmit = () => {
-    if (name.trim() === "") {
-      alert("name is empty, please enter name");
-      return;
-    }
-
-    if (email.trim() === "") {
-      alert("email is empty, please enter email");
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setEdit(false);
   };
 
   return (
     <>
       {editing ? (
         <div className="mainDiv">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setEdit(false);
-            }}
-          >
+          <form onSubmit={handleSubmit}>
             <div className="inputGroup">
               <label htmlFor="name">Name:</label>
               <input
@@ -58,7 +47,7 @@ const General = () => {
                 id="phone"
                 type="tel"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}  
+                onChange={(e) => setPhone(e.target.value)}
                 pattern="0[0-9]{9}"
                 title="Enter a 10-digit South African number beginning with 0"
                 required
