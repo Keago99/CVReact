@@ -1,0 +1,11 @@
+.mainDiv{
+    display: flex;
+}
+
+label{
+    margin-right: 0.5rem;
+}
+
+.inputGroup{
+    margin-bottom: 0.5rem;
+}
