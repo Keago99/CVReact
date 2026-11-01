@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="mainDiv">
-      <h1 className="mainHeading">CV Builder</h1>
+      <h1>CV Builder</h1>
       <General/>
       <Educational/>
       <Practical/>

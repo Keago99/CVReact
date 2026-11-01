@@ -3,10 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.mainHeading{
-  color:aquamarine;
+  border: 0;
+  margin: 0;
 }
 
 .label{

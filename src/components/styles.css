@@ -1,11 +1,113 @@
-.mainDiv{
-    display: flex;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-background: #151C24;
+  --color-primary: #C5D0DA;
+  --color-accent: #A45D68;
+  --color-gold: #B49A67;
+  --color-surface: #202B36;
+  --color-text: #E0DED7;
+  --color-muted: #9BA5AE;
+  --color-border: #3B4854;
 }
 
-label{
-    margin-right: 0.5rem;
+* {
+  box-sizing: border-box;
 }
 
-.inputGroup{
-    margin-bottom: 0.5rem;
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "Source Sans 3", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  padding: 20px;
+}
+
+.mainDiv,
+.displayDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  padding: 5px;
+  background-color: var(--color-surface);
+  border-top: 4px solid var(--color-gold);
+  border-radius: 5px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  margin-right: 0.5rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.inputGroup {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: #18232D;
+  color: var(--color-text);
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 1px;
+}
+
+input::placeholder {
+  color: var(--color-muted);
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  color: #151C24;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.displayItem {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
 }
